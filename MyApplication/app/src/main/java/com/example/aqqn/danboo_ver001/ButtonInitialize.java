@@ -36,7 +36,7 @@ public class ButtonInitialize {
                     onClickButton();
                 }
             });
-            _danboo.get(button);
+            //_danboo.get(button);
             ret.add(button);
         }
         return ret;
@@ -46,10 +46,10 @@ public class ButtonInitialize {
         ArrayList<GridLayout.LayoutParams> ret = new ArrayList<GridLayout.LayoutParams>();
 
         //TODO パラメータを取得する処理を書く
-        GridLayout.LayoutParams params = new GridLayout.LayoutParams();
         for( int i = 0; i < 8; i++ ) {
-            params.width = 80;
-            params.height = 80;
+            GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+            //params.width = 80;
+            //params.height = 80;
 
             params.columnSpec = GridLayout.spec(i%3);
             params.rowSpec = GridLayout.spec(i/3);

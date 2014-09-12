@@ -33,7 +33,7 @@ public class GridInitialize {
 
     private int[] getSize(){
         //TODO サイズを取得する処理が必要
-        int[] ret = {3,3};
+        int[] ret = {3,12};
         return  ret;
     }
 
