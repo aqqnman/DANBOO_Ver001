@@ -12,7 +12,7 @@ public class GridInitialize {
     private GridLayout _gl;
     private DANBOO _danboo;
 
-    public void initialize(DANBOO danboo)
+    public GridLayout initialize(DANBOO danboo)
     {
         //メインフレーム（？）を保持
         _danboo = danboo;
@@ -28,7 +28,8 @@ public class GridInitialize {
         _gl.setRowCount(ret[1]);
 
         //画面へグリッドを配置
-        danboo.setContentView(_gl);
+        //danboo.setContentView(_gl);
+        return _gl;
     }
 
     private int[] getSize(){

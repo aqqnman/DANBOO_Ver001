@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ScrollView;
 
 import java.util.ArrayList;
 
@@ -17,9 +18,16 @@ public class DANBOO extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danboo);
 
+        //スクロールさせる
+        ScrollView scroll = new ScrollView(this);
+        setContentView(scroll);
+
         //gridの作成と初期化
-        GridInitialize grid = new GridInitialize();
-        grid.initialize(this);
+        GridInitialize gridInit = new GridInitialize();
+        GridLayout grid = gridInit.initialize(this);
+
+        //スクロールにgridを登録
+        scroll.addView(grid);
 
         //buttonの作成と初期化
         ButtonInitialize button_init = new ButtonInitialize();
@@ -27,8 +35,8 @@ public class DANBOO extends Activity {
 
 
         for( Button button: buttons){
-            GridLayout gl = grid.get_gl();
-            gl.addView( button );
+            //GridLayout gl = grid.get_gl();
+            grid.addView( button );
         }
 
     }

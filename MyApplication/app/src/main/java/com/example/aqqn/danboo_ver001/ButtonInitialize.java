@@ -29,11 +29,12 @@ public class ButtonInitialize {
 
             Button button = new Button(danboo);
             button.setLayoutParams(param);
-            button.setText(String.valueOf(i));
+            button.setText(String.valueOf(i + 1));
+
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    onClickButton();
+                    onClickButton(view);
                 }
             });
             //_danboo.get(button);
@@ -46,7 +47,7 @@ public class ButtonInitialize {
         ArrayList<GridLayout.LayoutParams> ret = new ArrayList<GridLayout.LayoutParams>();
 
         //TODO パラメータを取得する処理を書く
-        for( int i = 0; i < 8; i++ ) {
+        for( int i = 0; i < 20; i++ ) {
             GridLayout.LayoutParams params = new GridLayout.LayoutParams();
             //params.width = 80;
             //params.height = 80;
@@ -60,7 +61,7 @@ public class ButtonInitialize {
         return ret;
     }
     //click処理
-    public void onClickButton() {
-        Toast.makeText(_danboo, "テスト", Toast.LENGTH_LONG).show();
+    public void onClickButton(View view) {
+        Toast.makeText(_danboo, view.toString() + view.getId()+"テスト", Toast.LENGTH_LONG).show();
     };
 }
