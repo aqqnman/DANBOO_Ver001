@@ -1,5 +1,6 @@
 package com.example.aqqn.danboo_ver001;
 
+import android.view.DragEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -53,4 +54,5 @@ public class GridInitialize {
     }
 
 
-}
+
+    }
