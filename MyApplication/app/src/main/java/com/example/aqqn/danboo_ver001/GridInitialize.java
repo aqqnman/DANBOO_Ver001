@@ -1,5 +1,6 @@
 package com.example.aqqn.danboo_ver001;
 
+import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 
@@ -26,6 +27,7 @@ public class GridInitialize {
         //取得したサイズでグリッドを作成
         _gl.setColumnCount(ret[0]);
         _gl.setRowCount(ret[1]);
+
 
         //画面へグリッドを配置
         //danboo.setContentView(_gl);

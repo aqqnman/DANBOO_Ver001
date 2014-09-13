@@ -1,5 +1,8 @@
 package com.example.aqqn.danboo_ver001;
 
+import android.content.ClipData;
+import android.content.Context;
+import android.view.DragEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -14,20 +17,20 @@ import java.util.HashMap;
  */
 public class ButtonInitialize {
     private DANBOO _danboo;
-    public ArrayList<Button> buttonList(DANBOO danboo) {
+    public ArrayList<DraggableButton> buttonList(DANBOO danboo) {
         //メインフレーム（？）を保持
         _danboo = danboo;
 
         //TODO buttonの名前も取得できるようにする
         ArrayList<GridLayout.LayoutParams> params = getButtonParams();
-        ArrayList<Button> ret = new ArrayList();
+        ArrayList<DraggableButton> ret = new ArrayList();
 
 
         for(int i = 0; i < params.size(); i++ ){
             GridLayout.LayoutParams param = params.get(i);
         //for ( GridLayout.LayoutParams param : params) {
 
-            Button button = new Button(danboo);
+            DraggableButton button = new DraggableButton(danboo);
             button.setLayoutParams(param);
             button.setText(String.valueOf(i + 1));
 
@@ -65,3 +68,5 @@ public class ButtonInitialize {
         Toast.makeText(_danboo, view.toString() + view.getId()+"テスト", Toast.LENGTH_LONG).show();
     };
 }
+
+

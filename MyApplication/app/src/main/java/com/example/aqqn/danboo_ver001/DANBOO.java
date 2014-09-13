@@ -31,10 +31,10 @@ public class DANBOO extends Activity {
 
         //buttonの作成と初期化
         ButtonInitialize button_init = new ButtonInitialize();
-        ArrayList<Button> buttons = button_init.buttonList(this);
+        ArrayList<DraggableButton> buttons = button_init.buttonList(this);
 
 
-        for( Button button: buttons){
+        for( DraggableButton button: buttons){
             //GridLayout gl = grid.get_gl();
             grid.addView( button );
         }
