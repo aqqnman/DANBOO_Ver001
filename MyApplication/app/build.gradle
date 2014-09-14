@@ -5,7 +5,7 @@ android {
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "com.example.aqqn.danboo_ver001"
+        applicationId "com.example.aqqn.test001"
         minSdkVersion 15
         targetSdkVersion 20
         versionCode 1
