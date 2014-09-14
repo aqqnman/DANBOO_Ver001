@@ -25,21 +25,24 @@
 
         <Button
             android:id="@+id/btnp"
-            android:layout_width="150sp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/calc" />
+            android:text="1"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/btnm"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/calc" />
+            android:text="@string/calc"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/btnio"
-            android:layout_width="150sp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/calc" />
+            android:text="@string/calc"
+            android:layout_weight="1"/>
 
 
 
